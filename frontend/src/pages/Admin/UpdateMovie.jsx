@@ -19,7 +19,7 @@ const UpdateMovie = () => {
     cast: [],
     ratings: 0,
     image: null,
-  });
+  }); 
 
   const [selectedImage, setSelectedImage] = useState(null);
   const { data: initialMovieData } = useGetSpecificMovieQuery(id);
@@ -104,8 +104,7 @@ const UpdateMovie = () => {
     } catch (error) {
       console.error("Failed to delete movie:", error);
       toast.error(`Failed to delete movie: ${error?.message}`);
-    }
-  };
+    }};
 
   return (
     <div className="container flex justify-center items-center mt-4">
